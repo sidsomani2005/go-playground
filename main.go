@@ -29,6 +29,7 @@ func main() {
 	fmt.Println("Doing some work...")
 
 	fmt.Println(personalInfo(Person{Firstname: "Sid", Lastname: "Somani", Age: 20}))
+	fmt.Println(superHeroInfo())
 }
 
 func sampleFunction(p1 string, p2 int) string {
@@ -47,6 +48,20 @@ type Person struct {
 	Age       int
 }
 
+type SuperHero struct {
+	Person
+	Superpower string
+}
+
 func personalInfo(p Person) string {
 	return fmt.Sprintf("%s %s is %d years old", p.Firstname, p.Lastname, p.Age)
+}
+
+func superHeroInfo() string {
+	s := SuperHero{}
+	s.Firstname = "Bruce"
+	s.Lastname = "Wayne"
+	s.Age = 30
+	s.Superpower = "Rich"
+	return fmt.Sprintf("%s %s is %d years old and has %s", s.Firstname, s.Lastname, s.Age, s.Superpower)
 }
