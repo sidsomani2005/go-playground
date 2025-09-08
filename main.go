@@ -30,6 +30,13 @@ func main() {
 
 	fmt.Println(personalInfo(Person{Firstname: "Sid", Lastname: "Somani", Age: 20}))
 	fmt.Println(superHeroInfo())
+
+	var arr [3]int
+	arr[0] = 1
+	arr[1] = 2
+	arr[2] = 3
+
+	fmt.Println(arr)
 }
 
 func sampleFunction(p1 string, p2 int) string {
