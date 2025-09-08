@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	fmt.Println("Hello World!")
@@ -16,4 +19,10 @@ func main() {
 		fmt.Println(i)
 		i++
 	}
+
+	fmt.Println(sampleFunction("Sid is of age ", 20))
+}
+
+func sampleFunction(p1 string, p2 int) string {
+	return p1 + strconv.Itoa(p2)
 }
