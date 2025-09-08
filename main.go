@@ -21,8 +21,20 @@ func main() {
 	}
 
 	fmt.Println(sampleFunction("Sid is of age ", 20))
+	anonymousFunction()
+
+	defer fmt.Println("I am finished")
+	defer fmt.Println("Are you?")
+
+	fmt.Println("Doing some work...")
 }
 
 func sampleFunction(p1 string, p2 int) string {
 	return p1 + strconv.Itoa(p2)
+}
+
+func anonymousFunction() {
+	func() {
+		fmt.Println("I am an anonymous function")
+	}()
 }
