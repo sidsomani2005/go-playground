@@ -27,6 +27,8 @@ func main() {
 	defer fmt.Println("Are you?")
 
 	fmt.Println("Doing some work...")
+
+	fmt.Println(personalInfo(Person{Firstname: "Sid", Lastname: "Somani", Age: 20}))
 }
 
 func sampleFunction(p1 string, p2 int) string {
@@ -37,4 +39,14 @@ func anonymousFunction() {
 	func() {
 		fmt.Println("I am an anonymous function")
 	}()
+}
+
+type Person struct {
+	Firstname string
+	Lastname  string
+	Age       int
+}
+
+func personalInfo(p Person) string {
+	return fmt.Sprintf("%s %s is %d years old", p.Firstname, p.Lastname, p.Age)
 }
