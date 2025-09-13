@@ -72,3 +72,12 @@ func superHeroInfo() string {
 	s.Superpower = "Rich"
 	return fmt.Sprintf("%s %s is %d years old and has %s", s.Firstname, s.Lastname, s.Age, s.Superpower)
 }
+
+func continueAndBreak() {
+	for i := 0; i < 10; i++ {
+		if i == 5 {
+			continue
+		}
+		fmt.Println(i)
+	}
+}
